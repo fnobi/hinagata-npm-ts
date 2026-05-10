@@ -4,9 +4,16 @@
   "description": "development typescript tools.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --write src"
   },
   "keywords": [
     "TypeScript"
@@ -14,16 +21,17 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "author": "Fujisawa Shin",
   "license": "ISC",
-  "dependencies": {
-    "typescript": "^3.9.7"
-  },
   "devDependencies": {
-    "@types/jest": "^26.0.24",
-    "@types/node": "^14.0.23",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^22.0.0",
     "jest": "^29.7.0",
-    "prettier": "^2.5.1",
-    "ts-jest": "^29.1.5"
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.2.0",
+    "typescript": "^5.7.0"
   }
 }
