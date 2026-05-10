@@ -13,10 +13,9 @@ jobs:
       ACTIONS_BUILD_COMMAND: npm run build
       ACTIONS_BUILD_DIST: dist
       ACTIONS_LOCK_FILE: package-lock.json
-      ACTIONS_NODE_VERSION: 15.x
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -26,9 +25,9 @@ jobs:
           git config --global user.name "Github Actions"
           git config --global push.default simple
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.ACTIONS_NODE_VERSION }}
+          node-version-file: .node-version
           registry-url: 'https://registry.npmjs.org'
 
       - uses: actions/cache@v4
