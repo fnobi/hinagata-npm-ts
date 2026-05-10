@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2015",
-    "lib": ["es2018"],
+    "module": "CommonJS",
+    "target": "ES2022",
+    "lib": ["ES2022"],
     "strict": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "outDir": "./dist/",
     "declaration": true,
+    "declarationMap": true,
     "sourceMap": true
   },
   "include": [
